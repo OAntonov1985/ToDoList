@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+ul, li {
+    list-style: none;
+}
+
+.header__list {
+    margin: auto;
+    display: flex;
+    width: 90%;
+    background-color: gray;    
+    justify-content: space-between
+}
+
+.cat__list {
+    float: left;
+}

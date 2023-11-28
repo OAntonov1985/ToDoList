@@ -1,0 +1,90 @@
+{
+  "actualList": [
+    {
+      "id": 1,
+      "Name": "Shopping list",
+      "Created": "2023-01-01",
+      "Category": "Task",
+      "Content": "Some food",
+      "Dates": "",
+      "IMG": "путь/к/изображению1.jpg"
+    },
+    {
+      "id": 2,
+      "Name": "The teody of evolution",
+      "Created": "2023-02-01",
+      "Category": "Random thing",
+      "Content": "The evolution",
+      "Dates": "2023-02-15",
+      "IMG": "путь/к/изображению2.jpg"
+    },
+    {
+      "id": 3,
+      "Name": "New feature",
+      "Created": "2023-03-01",
+      "Category": "Must learn BackEnd",
+      "Content": "Work smart not hard",
+      "Dates": "",
+      "IMG": "путь/к/изображению3.jpg"
+    },
+    {
+      "id": 4,
+      "Name": "Задача 4",
+      "Created": "2023-04-01",
+      "Category": "Здоровье",
+      "Content": "Описание задачи 4",
+      "Dates": "",
+      "IMG": "путь/к/изображению4.jpg"
+    },
+    {
+      "id": 5,
+      "Name": "Meet some friends",
+      "Created": "2023-05-01",
+      "Category": "Drunk",
+      "Content": "drink with friends",
+      "Dates": "",
+      "IMG": "путь/к/изображению5.jpg"
+    },
+    {
+      "id": 6,
+      "Name": "Plan for the future",
+      "Created": "2023-06-01",
+      "Category": "Big plan",
+      "Content": "Get an offer",
+      "Dates": "2023-06-1",
+      "IMG": "путь/к/изображению6.jpg"
+    },
+    {
+      "id": 7,
+      "Name": "Celebrating",
+      "Created": "2023-07-01",
+      "Category": "Family",
+      "Content": "celebrate with family",
+      "Dates": "2023-07-20",
+      "IMG": "путь/к/изображению7.jpg"
+    }
+  ],
+  "archive": [
+    {
+      "id": 1,
+      "Note": "New feature",
+      "Category": "Work",
+      "Active": true,
+      "Archived": false
+    },
+    {
+      "id": 2,
+      "Note": "Plan for the future",
+      "Category": "Big plan",
+      "Active": false,
+      "Archived": true
+    },
+    {
+      "id": 3,
+      "Note": "Celebrating 3",
+      "Category": "Family",
+      "Active": false,
+      "Archived": true
+    }
+  ]
+}
