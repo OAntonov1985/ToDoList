@@ -1,18 +1,53 @@
 body {
     margin: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
 }
 ul, li {
     list-style: none;
+    border-radius: 3px;
 }
 
 .header__list {
-    margin: auto;
-    display: flex;
+    margin: auto;   
     width: 90%;
     background-color: gray;    
-    justify-content: space-between
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 0;
+    text-align: center;  
+    gap: 10px;  
 }
 
-.cat__list {
-    float: left;
+.cat__list {    
+    padding: 10px 0;
+    color: white;
+     
+}
+.cat__listitem {
+    padding: 10px 0;
+    color: rgb(14, 14, 14);
+    display: flex;
+    /* display: flex;
+    flex-direction: row; */
+    /* display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 10px; */
+}
+
+.header__listitem {
+    margin: auto;   
+    width: 90%;
+    background-color: gray;
+    padding-left: 0;
+    text-align: center;
+    padding-left: 0;
+   
+
+}
+
+.todoList {
+    list-style: none;
+    padding: 0;
+    display: flex; 
 }
