@@ -2,52 +2,53 @@ body {
     margin: 0;
     font-family: Roboto;
     box-sizing: border-box;
+    margin: 0;    
+    padding: 0;
 }
 ul, li {
     list-style: none;
     border-radius: 3px;
+    margin: 0;    
+    padding: 0;
 }
 
-.header__list {
-    margin: auto;   
-    width: 90%;
+
+.header__toDo__list, .cat__listitem {   
+    width: 95%;
+    padding: 10px 0;
     background-color: gray;    
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     padding-left: 0;
     text-align: center;  
-    gap: 10px;  
+    gap: 10px;
+    color: white;  
+    margin: 10px auto;
 }
 
-.cat__list {    
-    padding: 10px 0;
-    color: white;
-     
+.cat__6 {
+    color: gray;
+    /* z-index: -1; */
 }
-.cat__listitem {
-    padding: 10px 0;
-    color: rgb(14, 14, 14);
-    display: flex;
-    /* display: flex;
-    flex-direction: row; */
-    /* display: grid; 
-    grid-template-columns: repeat(6, 1fr); 
-    gap: 10px; */
-}
-
-.header__listitem {
-    margin: auto;   
-    width: 90%;
+.img__header {
+    filter: invert(1);
     background-color: gray;
-    padding-left: 0;
-    text-align: center;
-    padding-left: 0;
-   
-
 }
 
-.todoList {
-    list-style: none;
-    padding: 0;
-    display: flex; 
+.img__garbage {
+    width: 30px;    
+     background-color: gray;
 }
+.button__header, .button__active__list {
+    background-color: gray;
+    border: none;
+}
+
+
+
+
+
+
+
+
+

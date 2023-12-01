@@ -1,49 +1,26 @@
 'use strict';
-// import { render } from './render.js'
-// import data from '../data.json'
+import { renderCurrentToDoLost } from './render.js'
 
 
 
-let arrToDo = [];
-function one() {
+export let arrToDo = [];
+function getDataFromJson() {
     fetch('../data.json')
         .then((response) => response.json())
         .then((json) => arrToDo = json.actualList)
-    // .then(() => render(arrToDo))
-    console.log(arrToDo)
-
+        .then(() => renderCurrentToDoLost(arrToDo))
 
 }
-one()
-console.log(arrToDo.length === 0 ? null : 'yes')
+getDataFromJson()
 
-function render(arr) {
-    const todoListElement = document.getElementById('todoList');
-    todoListElement.innerHTML = ''
-    console.log(777)
-    arr.map((task) => {
-        const taskElement = document.createElement('li');
-        taskElement.innerHTML = `
-        <div>${task.Name}</div>
-        <div> ${task.Category}</div>
-        <div> ${task.Created}</div>
-        <div> ${task.Content}</div>
-        <div> ${task.Dates}</div>        
-    `;
-        todoListElement.appendChild(taskElement);
-        taskElement.classList.add('cat__listitem');
 
-    });
-}
-document.querySelector('.button').addEventListener('click', function () {
-    render(arrToDo);
-});
-document.querySelector('.button2').addEventListener('click', treee);
-function treee() {
+
+
+document.querySelector('.button2').addEventListener('click', reRenderCurrentToDoLost);
+
+
+function reRenderCurrentToDoLost() {
+    delete arrToDo[5];
     console.log(arrToDo.length)
-    delete arrToDo[5]
-    // arrToDo = arrToDo.splice(5, 1);
-    console.log(arrToDo.length)
-    render(arrToDo)
-    // return arrToDo;
+    renderCurrentToDoLost(arrToDo)
 }
