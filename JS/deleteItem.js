@@ -1,7 +1,9 @@
 'use strict'
+import { renderCurrentToDoLost } from './renderMainList.js';
+import { arrToDo } from './main.js';
 
-// import 
 
-export default function deleteItem() {
-    console.log(777)
+export default function deleteItem(num) {
+    delete arrToDo[num];
+    renderCurrentToDoLost(arrToDo);
 };

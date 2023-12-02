@@ -13,10 +13,11 @@ ul, li {
 }
 
 
-.header__toDo__list, .cat__listitem {   
+
+.header__toDo__list, .cat__listitem{   
     width: 95%;
     padding: 10px 0;
-    background-color: gray;    
+    background-color: 	#808080;    
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     padding-left: 0;
@@ -24,25 +25,74 @@ ul, li {
     gap: 10px;
     color: white;  
     margin: 10px auto;
+    align-items: center;
 }
 
-.cat__6 {
-    color: gray;
-    /* z-index: -1; */
+
+.cat__listitem, .input__date, .arhive__li__item  {
+    background-color: #e8eaf6;
+    color: #73767f;
 }
+.input__date {
+    border: none;
+}
+.cat__name {
+    color: #373a43;
+    font-weight: bold;
+}
+
 .img__header {
-    filter: invert(1);
-    background-color: gray;
+    filter: invert(1);    
+}
+.cat__list {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.img__garbage {
-    width: 30px;    
-     background-color: gray;
+.img__logo {
+    width: 20px;   
+    
 }
 .button__header, .button__active__list {
     background-color: gray;
     border: none;
 }
+
+.button__active__list {
+    background-color: #e8eaf6;
+    border: none;
+}
+
+.div__create__note {    
+    width: 95%;
+    margin: 20px auto  70px;
+    display: flex;
+    justify-content: right;
+}
+
+/* ////////////////////////////// */
+
+.toDo__list__head {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+
+.arhive__li__item {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.arhive__toDo {
+    margin-bottom:  300px;
+}
+
+
 
 
 

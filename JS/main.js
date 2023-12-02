@@ -1,26 +1,29 @@
 'use strict';
-import { renderCurrentToDoLost } from './render.js'
-
-
+import renderArhiveListItem from './renderArhiveList.js';
+import { renderCurrentToDoLost } from './renderMainList.js';
 
 export let arrToDo = [];
-function getDataFromJson() {
-    fetch('../data.json')
-        .then((response) => response.json())
-        .then((json) => arrToDo = json.actualList)
-        .then(() => renderCurrentToDoLost(arrToDo))
+export let archiveTodo = [];
+async function getDataFromJson() {
+    try {
+        const response = await fetch('../data.json');
+        if (!response.ok) {
+            throw new Error(`Ошибка при загрузке: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        arrToDo = jsonData.actualList;
+        archiveTodo = jsonData.archive;
 
+        renderCurrentToDoLost(arrToDo);
+        renderArhiveListItem(archiveTodo);
+    } catch (error) {
+        console.error('Упс... Щось пішло не так', error);
+        alert('Упс... Щось пішло не так', error);
+    }
 }
-getDataFromJson()
+
+getDataFromJson();
 
 
 
 
-document.querySelector('.button2').addEventListener('click', reRenderCurrentToDoLost);
-
-
-function reRenderCurrentToDoLost() {
-    delete arrToDo[5];
-    console.log(arrToDo.length)
-    renderCurrentToDoLost(arrToDo)
-}

@@ -7,65 +7,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     <title>ToDoList</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="list__actuale">
+        <div class="list__actual">
             <div class="list__header">
                 <h1>Actual Business</h1>
             </div>
             <div class="current__toDo__list">
                 <div class="div__ul__list">
                     <ul class="header__toDo__list">
-                        <li class="cat__1 cat__list" >Name</li>
-                        <li class="cat__2 cat__list">Created</li>
-                        <li class="cat__3 cat__list">Category</li>
-                        <li class="cat__4 cat__list">Content</li>
-                        <li class="cat__5 cat__list">Dates</li>
-                        <li class="cat__6 cat__list" >
+                        <li class="cat__list" >Name</li>
+                        <li class="cat__list">Created</li>
+                        <li class="cat__list">Category</li>
+                        <li class="cat__list">Content</li>
+                        <li class="cat__list">Dates</li>
+                        <li class="cat__list" >
                             <button class="button__header button__edit">
-                                <img  class="img__garbage img__header" src="./img/edit.png" alt="garbage">
+                                <img  class="img__logo img__header" src="./img/edit.png" alt="garbage">
                             </button>
                             <button class="button__header button__delete">
-                                <img  class="img__garbage img__header" src="./img/garbage.png" alt="garbage"> 
+                                <img  class="img__logo img__header" src="./img/garbage.png" alt="garbage"> 
                             </button>
                             <button class="button__header button__arh">
-                                <img  class="img__garbage img__header" src="./img/arh.png" alt="garbage">   
+                                <img  class="img__logo img__header" src="./img/arh.png" alt="garbage">   
                             </button>                          
                         </li>                    
-                     </ul>
-                </div>                
-                <button class="button">Push</button>
-                <button class="button2">5</button>
+                     </ul>                     
+                </div>             
                 <div class="div__ul__list">
                     <ul id="todoList" class="main__toDo__list">             
+                </div>                                
+            </div>
+            <div class="div__create__note">
+                <button class="button__create__note">Create Note</button>
+            </div>
+            <div class="arhive__toDo"> 
+                <div class="arhive__toDo__list__header">
+                    <ul class="header__toDo__list toDo__list__head">
+                        <li class="cat__list" >Note category</li>
+                        <li class="cat__list">Active</li>
+                        <li class="cat__list">Archived</li>                    
+                    </ul>   
                 </div>
-                                  
-                </ul>
-            </div>
-            <div class="arhive__toDo__list"> 
-                <ul class="header__listitem">
-                     <!-- <li class="cat__1 cat__listitem">
-                        <div class="column">Shopping list</div>
-                        <div class="column">2023-01-01</div>
-                        <div class="column">Task</div>
-                        <div class="column">Some food</div>
-                        <div class="column"></div>
-                        <div class="column">IMG</div>
-                    </li>      -->
-                </ul>           
-            </div>
-            <!-- <ul id="todoList">
-                    <li></li>
-                </ul> -->
-            <div class="list__categories__names">
-                
-            </div>
+                <div class="arhive__toDo__list__main">
+                    <ul class="toDo__list__main toDo__list__arhive">                      
+                    </ul>
+                </div>           
+            </div>            
         </div>
-        <div class="list__done"></div>
+        
     </div>
 </body>
- <!-- <script id="jsonData" type="application/json" src="data.json"></script> -->
 <script type="module" src="./JS/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </html>

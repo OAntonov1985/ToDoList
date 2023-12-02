@@ -11,36 +11,36 @@
     },
     {
       "id": 2,
-      "Name": "The teody of evolution",
+      "Name": "The teory of evolution",
       "Created": "2023-02-01",
       "Category": "Random thing",
       "Content": "The evolution",
-      "Dates": "2023-02-15",
+      "Dates": "2023-10-17",
       "IMG": "путь/к/изображению2.jpg"
     },
     {
       "id": 3,
       "Name": "New feature",
       "Created": "2023-03-01",
-      "Category": "Must learn BackEnd",
+      "Category": "Random thing",
       "Content": "Work smart not hard",
       "Dates": "",
       "IMG": "путь/к/изображению3.jpg"
     },
     {
       "id": 4,
-      "Name": "New feature",
+      "Name": "Random thing",
       "Created": "2023-04-01",
-      "Category": "Must learn BackEnd",
+      "Category": "Random thing",
       "Content": "Work smart not hard",
       "Dates": "",
       "IMG": "путь/к/изображению4.jpg"
     },
     {
       "id": 5,
-      "Name": "Meet some friends",
+      "Name": "Drunk",
       "Created": "2023-05-01",
-      "Category": "Drunk",
+      "Category": "Idea",
       "Content": "drink with friends",
       "Dates": "",
       "IMG": "путь/к/изображению5.jpg"
@@ -48,43 +48,40 @@
     {
       "id": 6,
       "Name": "Plan for the future",
-      "Created": "2023-06-01",
-      "Category": "Big plan",
+      "Created": "2023-10-17",
+      "Category": "Task",
       "Content": "Get an offer",
-      "Dates": "2023-06-1",
+      "Dates": "2024-06-10",
       "IMG": "путь/к/изображению6.jpg"
     },
     {
       "id": 7,
       "Name": "Celebrating",
-      "Created": "2023-07-01",
-      "Category": "Family",
+      "Created": "2023-10-17",
+      "Category": "Task",
       "Content": "celebrate with family",
-      "Dates": "2023-07-20",
+      "Dates": "2024-07-20",
       "IMG": "путь/к/изображению7.jpg"
     }
   ],
   "archive": [
     {
       "id": 1,
-      "Note": "New feature",
-      "Category": "Work",
-      "Active": true,
-      "Archived": false
+      "NoteCategory": "Task",
+      "Active": "14",
+      "Arhived": "6"
     },
     {
       "id": 2,
-      "Note": "Plan for the future",
-      "Category": "Big plan",
-      "Active": false,
-      "Archived": true
+      "NoteCategory": "Idea",
+      "Active": "2",
+      "Arhived": "14"
     },
     {
       "id": 3,
-      "Note": "Celebrating 3",
-      "Category": "Family",
-      "Active": false,
-      "Archived": true
+      "NoteCategory": "Random thing",
+      "Active": "17",
+      "Arhived": "17"      
     }
   ]
 }
