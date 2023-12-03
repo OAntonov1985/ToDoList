@@ -73,17 +73,17 @@
                     <form id="noteForm" class="create__new__note  edit__note">
                         <div class="row__1 row__form">
                             <label class="label__info" for="name">Name:</label>
-                        <input class="input__form textInput" type="text" id="textInput" name="Name" minlength="10" pattern=".{10,}" value="" required>
+                        <input class="input__form input__name textInput" type="text" id="textInput" name="Name" minlength="5" value="" pattern=".{5,}" required>
                         </div>
 
                         <div class="row__2 row__form">
                             <label class="label__info" for="created">Created:</label>
-                        <input class="input__form" type="date" id="created" name="Created" value="" required>
+                        <input class="input__form input__created" type="date" id="created" name="Created" value="" required>
                         </div>
 
                         <div class="row__3 row__form">
                             <label class="label__info" for="category">Category:</label>
-                        <select class="input__form" id="category" name="Category" required>
+                        <select class="input__form input__select" id="category" name="Category" required value="">
                             <option class="label__info" value="Task">Task</option>
                             <option class="label__info" value="Random thing">Random thing</option>
                             <option class="label__info" value="Idea">Idea</option>
@@ -92,12 +92,12 @@
 
                         <div class="row__4 row__form">
                             <label class="label__info" for="content">Content:</label>
-                        <textarea class="input__form textInput" id="content" name="Content" value="" required minlength="10" pattern=".{10,}"></textarea>
+                        <textarea class="input__form textInput input__textarea" id="content" name="Content" value="" required minlength="5" pattern=".{5,}"></textarea>
                         </div>    
                                                 
                         <div  class="row__5 row__form">
                             <label class="label__info" for="dates">Dates:</label>
-                        <input class="input__form" type="date" id="dates" name="Dates" value="">
+                        <input class="input__form input__date" type="date" id="dates" name="Dates" >
                         </div>  
                         
                         <div class="row__6 row__form">

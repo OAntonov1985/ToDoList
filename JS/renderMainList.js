@@ -31,6 +31,10 @@ function renderCurrentToDoLost(arr) {
         todoListElement.appendChild(taskElement);
         taskElement.classList.add('cat__listitem');
 
+        const arrButtonsEdir = document.querySelectorAll('.button__edit');
+        arrButtonsEdir.forEach(function (button) {
+            button.addEventListener('click', modalWindow);
+        });
 
         const arrButtonsDelete = document.querySelectorAll('.button__delete');
         arrButtonsDelete.forEach(function (button) {
