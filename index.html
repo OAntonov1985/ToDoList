@@ -13,7 +13,8 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="list__actual">
+        <section id="1">
+            <div class="list__actual">
             <div class="list__header">
                 <h1>Actual Business</h1>
             </div>
@@ -45,6 +46,11 @@
             <div class="div__create__note">
                 <button class="button__create__note">Create Note</button>
             </div>
+                        
+        </div>  
+        </section>
+
+        <section id="2">
             <div class="arhive__toDo"> 
                 <div class="arhive__toDo__list__header">
                     <ul class="header__toDo__list toDo__list__head">
@@ -57,9 +63,51 @@
                     <ul class="toDo__list__main toDo__list__arhive">                      
                     </ul>
                 </div>           
-            </div>            
-        </div>
-        
+            </div>
+        </section>
+
+        <section id="3">
+            <div id="myModal" class="modal__window">
+                <div class="modal-content">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <form id="noteForm" class="create__new__note  edit__note">
+                        <div class="row__1 row__form">
+                            <label class="label__info" for="name">Name:</label>
+                        <input class="input__form textInput" type="text" id="textInput" name="Name" minlength="10" pattern=".{10,}" value="" required>
+                        </div>
+
+                        <div class="row__2 row__form">
+                            <label class="label__info" for="created">Created:</label>
+                        <input class="input__form" type="date" id="created" name="Created" value="" required>
+                        </div>
+
+                        <div class="row__3 row__form">
+                            <label class="label__info" for="category">Category:</label>
+                        <select class="input__form" id="category" name="Category" required>
+                            <option class="label__info" value="Task">Task</option>
+                            <option class="label__info" value="Random thing">Random thing</option>
+                            <option class="label__info" value="Idea">Idea</option>
+                        </select>
+                        </div>
+
+                        <div class="row__4 row__form">
+                            <label class="label__info" for="content">Content:</label>
+                        <textarea class="input__form textInput" id="content" name="Content" value="" required minlength="10" pattern=".{10,}"></textarea>
+                        </div>    
+                                                
+                        <div  class="row__5 row__form">
+                            <label class="label__info" for="dates">Dates:</label>
+                        <input class="input__form" type="date" id="dates" name="Dates" value="">
+                        </div>  
+                        
+                        <div class="row__6 row__form">
+                            <button type="submit" id="saveBtn" class="btn__save button__create__note">Save</button>
+                        </div>                                              
+                    </form>
+                </div>
+            </div>
+        </section>          
+    
     </div>
 </body>
 <script type="module" src="./JS/main.js"></script>
