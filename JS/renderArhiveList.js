@@ -13,6 +13,5 @@ export default function renderArhiveListItem(archiveTodo) {
          `;
         arhiveTodoListElement.appendChild(arhiveTaskElement);
     })
-    console.log(archiveTodo)
 };
 

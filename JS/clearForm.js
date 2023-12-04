@@ -5,4 +5,4 @@ export default function clearForm() {
     document.getElementById('category').value = 'Task';
     document.getElementById('content').value = '';
     document.getElementById('dates').value = '';
-}
+};

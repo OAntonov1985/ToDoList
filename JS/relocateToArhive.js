@@ -10,4 +10,4 @@ export default function relocateItemToArhive(event) {
     filter[0].Arhived = String(+filter[0].Arhived + 1);
     deleteItem(num)
     renderArhiveListItem(archiveTodo);
-}
+};

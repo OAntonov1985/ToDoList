@@ -14,6 +14,11 @@ ul, li {
     word-wrap: break-word;
 }
 
+.title__name {
+    width: 95%;
+    margin: 15px auto;
+}
+
 
 
 .header__toDo__list, .cat__listitem{   
