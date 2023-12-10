@@ -5,7 +5,8 @@ import { modal } from './modalWindow.js';
 let editingNote = {};
 
 export default function displayNoteForEditing(num) {
-    editingNote = arrToDo[num];
+    const index = arrToDo.findIndex(item => item.id === num + 1);
+    editingNote = arrToDo[index];
     modal.style.display = "block";
     document.querySelector('.input__name').value = editingNote.Name;
     document.querySelector('.input__created').value = editingNote.Created;

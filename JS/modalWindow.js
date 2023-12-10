@@ -12,12 +12,12 @@ export let itemNum = -1;
 const openModalBtn = document.querySelector('.button__create__note');
 const closeModalBtn = document.querySelector('.close');
 export const modal = document.querySelector('.modal__window');
-// const noteForm = document.getElementById('noteForm');
 const saveBtn = document.getElementById('saveBtn');
 
 
 export default function modalWindow(event) {
-    itemNum = +event.target.id - 1
+    itemNum = +event.target.id - 1;
+    console.log(itemNum)
     displayNoteForEditing(itemNum);
     actionType = 'edit';
 }
@@ -44,14 +44,11 @@ closeModalBtn.addEventListener('click', () => {
 
 saveBtn.addEventListener('click', function (event) {
     event.preventDefault();
-    // saveEditNote(event);
     if (actionType === 'create') {
         saveNewNote(event);
-        console.log(actionType)
     } else if (actionType === 'edit') {
-        saveEditNote(event);
+        saveEditNote(itemNum);
     }
-
 });
 
 

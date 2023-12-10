@@ -64,7 +64,7 @@
       "IMG": "путь/к/изображению7.jpg"
     }
   ],
-  "archive": [
+  "total": [
     {
       "id": 1,
       "NoteCategory": "Task",

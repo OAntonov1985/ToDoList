@@ -21,7 +21,7 @@ ul, li {
 
 
 
-.header__toDo__list, .cat__listitem{   
+.header__toDo__list, .cat__listitem, .toDo__list{   
     width: 95%;
     padding: 10px 0;
     background-color: 	#808080;    
@@ -37,7 +37,7 @@ ul, li {
 }
 
 
-.cat__listitem, .input__date, .arhive__li__item  {
+.cat__listitem, .input__date, .total__li__item{
     background-color: #e8eaf6;
     color: #73767f;
 }
@@ -57,18 +57,37 @@ ul, li {
     font-weight: bold;
 }
 
-.img__logo {
+.img__logo, .img__header__logo {
     width: 20px;   
     
 }
 .button__header, .button__active__list {
     background-color: gray;
     border: none;
+    /* background-image: url('./img/garbage.png');
+    background-size: cover; /* или contain, в зависимости от требован */
+    /* background-image: url(./img/arh.png); */
+    z-index: -5;
 }
 
-.button__active__list {
-    background-color: #e8eaf6;
-    border: none;
+.button__delete, .button__edit, .button__arh, .button__delete__2, .button__arh__2  {
+    background-color: #e8eaf6; 
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
+
+.button__delete, .button__delete__2 {
+    background-image: url('./img/garbageMod.png');
+}
+
+.button__edit {    
+    background-image: url('./img/editMod.png');
+}
+
+.button__arh, .button__arh__2 {     
+    background-image: url('./img/arhMod.png'); 
+    margin-left: 5px;
 }
 
 .div__create__note {    
@@ -85,7 +104,7 @@ ul, li {
     grid-template-columns: 50% 25% 25%;
 }
 
-.arhive__li__item {
+.total__li__item {
     width: 95%;
     display: flex;
     flex-direction: row;
@@ -96,7 +115,7 @@ ul, li {
     padding: 10px 0;
 }
 
-.arhive__toDo {
+.total__toDo {
     margin-bottom:  300px;
 }
 
@@ -200,6 +219,36 @@ ul, li {
 
 .textInput:focus {
   outline: none;
+}
+
+.arhive__div {
+    background-color: #e8eaf6;
+    color: #73767f;
+    border-radius: 5px;
+}
+
+.arhive__list {
+    width: 90%;    
+    margin: 10px auto;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;   
+    color: #373a43;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.arhive__div li{
+    margin: 20px;
+    background-color: #e8eaf6; 
+    
+}
+
+.arhive__div:hover {
+    transform: scale(1.05);
+}
+
+.ul_task, .ul_idea, .ul_random {
+    display: none;
 }
 
 
