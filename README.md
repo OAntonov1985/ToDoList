@@ -7,10 +7,11 @@
    In this app im used:
    JavaScript
         Import / export 
-        Array methods: map, forEach, filter 
+        Array methods: map, forEach, filter, splice, findIndex 
         Array spread operator
         Regular expressions
 
     DOM API
         document.querySelector
         document.addEventListener
+        document.getElementById
