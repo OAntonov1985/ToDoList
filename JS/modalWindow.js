@@ -2,7 +2,7 @@
 
 import saveEditNote from './saveEditNote.js';
 import saveNewNote from './saveNewNote.js';
-import displayNoteForEditing from './displayNoteForEditing.js'
+import displayNoteForEditing from './displayNoteForEditing.js';
 
 
 export let actionType = 'create';
@@ -17,25 +17,23 @@ const saveBtn = document.getElementById('saveBtn');
 
 export default function modalWindow(event) {
     itemNum = +event.target.id - 1;
-    console.log(itemNum)
     displayNoteForEditing(itemNum);
     actionType = 'edit';
-}
+};
 
 export function setItemNum(num) {
     itemNum = num;
-}
+};
 
 export function setActionType(string) {
     actionType = string;
-}
+};
 
 
 
 openModalBtn.addEventListener('click', () => {
     actionType = 'create';
     modal.style.display = 'block';
-    console.log(actionType)
 });
 
 closeModalBtn.addEventListener('click', () => {

@@ -4,7 +4,6 @@ import deleteItem from './deleteItem.js';
 import modalWindow from './modalWindow.js';
 import { arrToDo } from './main.js';
 
-
 export let visibility = "0";
 
 function renderCurrentToDoLost(arr) {
@@ -49,7 +48,7 @@ function renderCurrentToDoLost(arr) {
     arrButtonsRelocate.forEach(function (button) {
         button.addEventListener('click', relocateItemToArhive);
     });
-}
+};
 
 
 
@@ -66,4 +65,3 @@ document.addEventListener('click', function (e) {
 
 export { renderCurrentToDoLost };
 
-// <img id=${task.id} class="img__logo" src="./img/garbageMod.png" alt="delete" value= delete_main title="Delete"> 

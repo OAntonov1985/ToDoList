@@ -7,7 +7,6 @@ import renderTotalListItem from './renderTotalList.js';
 
 
 export default function relocateItemToArhive(event) {
-    const num = +event.target.id - 1;
     const index = arrToDo.findIndex(item => item.id === +event.target.id);
     const array = arrToDo[index];
     archiveToDo.push(array);
