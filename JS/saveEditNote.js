@@ -18,9 +18,7 @@ export default function saveEditNote(event) {
         let newObj = {};
         newObj = Object.assign({ "id": index }, note);
         arrToDo[index] = newObj;
-
         renderCurrentToDoLost(arrToDo);
-
         modal.style.display = 'none';
     };
 

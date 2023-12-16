@@ -1,9 +1,6 @@
 'use strict';
 import { visibility } from './renderMainList.js';
 import relocateToMainList from './relocateToMainList.js';
-import { archiveToDo } from './main.js';
-import { arrToDo } from './main.js';
-import { renderCurrentToDoLost } from './renderMainList.js';
 import deleteItem from './deleteItem.js';
 
 
@@ -93,6 +90,6 @@ export default function renderArchiveToDo(archiveToDo) {
     arrButtonsRelocateToActualList.forEach(function (button) {
         button.addEventListener('click', relocateToMainList);
     });
-}
+};
 
 

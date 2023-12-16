@@ -12,7 +12,7 @@ export default function deleteItem(event, array) {
             renderCurrentToDoLost(array);
         } else if (event.target.value === "delete_archive") {
             renderArchiveToDo(array);
-        }
-    }
+        };
+    };
     renderTotalListItem();
 };

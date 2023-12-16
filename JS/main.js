@@ -1,7 +1,7 @@
 'use strict';
 import renderTotalListItem from './renderTotalList.js';
 import { renderCurrentToDoLost } from './renderMainList.js';
-import renderArchiveToDo from './renderArchiveList.js'
+import renderArchiveToDo from './renderArchiveList.js';
 
 
 export let arrToDo = [
