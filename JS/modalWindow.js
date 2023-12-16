@@ -17,7 +17,6 @@ const saveBtn = document.getElementById('saveBtn');
 
 export default function modalWindow(event) {
     itemNum = +event.target.id - 1;
-    console.log(itemNum)
     displayNoteForEditing(itemNum);
     actionType = 'edit';
 }
@@ -53,17 +52,6 @@ saveBtn.addEventListener('click', function (event) {
 
 
 
-// Зміна кольору полів input
-document.getElementById('textInput').addEventListener('input', function () {
-    const inputValue = this.value;
-    const minLength = 5;
-
-    if (inputValue.length < minLength) {
-        this.setCustomValidity(`Text must be at least ${minLength} characters`);
-    } else {
-        this.setCustomValidity('');
-    }
-});
 
 // Встановлення поточної дати
 document.addEventListener('DOMContentLoaded', function () {
