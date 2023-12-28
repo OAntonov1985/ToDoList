@@ -7,6 +7,9 @@ import { arrToDo } from './main.js';
 export let visibility = "0";
 
 function renderCurrentToDoLost(arr) {
+    // const storedObject = JSON.parse(sessionStorage.getItem('jsonData'));
+    // arrToDo = storedObject.arrToDo;
+    // console.log(arrToDo)
     const todoListElement = document.getElementById('todoList');
     todoListElement.innerHTML = '';
     arr.map((task) => {

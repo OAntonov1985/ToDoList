@@ -1,8 +1,9 @@
 "use strict";
-import { arrToDo } from './main.js';
-import { archiveToDo } from './main.js';
 
 export default function renderTotalListItem() {
+    const arrToDo = JSON.parse(sessionStorage.getItem('arrToDo'));
+    const archiveToDo = JSON.parse(sessionStorage.getItem('archiveToDo'));
+    console.log(arrToDo, archiveToDo)
     const totalTodoListElement = document.querySelector('.toDo__list__total');
     totalTodoListElement.innerHTML = '';
     const actualNotesTask = arrToDo.filter(item => item.Category === "Task").length;
