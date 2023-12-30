@@ -4,15 +4,29 @@ import renderArchiveToDo from './renderArchiveList.js';
 import renderTotalListItem from './renderTotalList.js';
 
 
-export default function deleteItem(event, array) {
-    const index = array.findIndex(item => item.id === +event.target.id);
+export default function deleteItem(itemId, arrArgument) {
+    let index;
+    let operatingArray;
+
+    if (arrArgument === 'arrToDo') {
+        operatingArray = JSON.parse(sessionStorage.getItem('arrToDo'));
+        index = operatingArray.findIndex(item => item.id === +itemId.target.id);
+    }
+    else if (arrArgument === 'archiveToDo') {
+        operatingArray = JSON.parse(sessionStorage.getItem('archiveToDo'));
+        index = operatingArray.findIndex(item => item.id === +itemId.target.id);
+    }
+
     if (index !== -1) {
-        array.splice(index, 1);
-        if (event.target.value === "delete_main" || event.target.value === "archive_main") {
-            renderCurrentToDoLost(array);
-        } else if (event.target.value === "delete_archive") {
-            renderArchiveToDo(array);
-        };
+        operatingArray.splice(index, 1);
+
+        if (arrArgument === 'arrToDo') {
+            sessionStorage.setItem('arrToDo', JSON.stringify(operatingArray));
+            renderCurrentToDoLost()
+        } else if (arrArgument === 'archiveToDo') {
+            sessionStorage.setItem('archiveToDo', JSON.stringify(operatingArray));
+            renderArchiveToDo()
+        }
     };
-    renderTotalListItem();
+    renderTotalListItem()
 };

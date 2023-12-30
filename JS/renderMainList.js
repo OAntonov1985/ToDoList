@@ -1,15 +1,11 @@
 "use strict";
-import relocateItemToArhive from './relocateToArchive.js';
 import deleteItem from './deleteItem.js';
 import modalWindow from './modalWindow.js';
-import { arrToDo } from './main.js';
-
+import relocateItem from './relocateItem.js';
 export let visibility = "0";
 
-function renderCurrentToDoLost(arr) {
-    // const storedObject = JSON.parse(sessionStorage.getItem('jsonData'));
-    // arrToDo = storedObject.arrToDo;
-    // console.log(arrToDo)
+function renderCurrentToDoLost() {
+    const arr = JSON.parse(sessionStorage.getItem('arrToDo'));
     const todoListElement = document.getElementById('todoList');
     todoListElement.innerHTML = '';
     arr.map((task) => {
@@ -42,14 +38,14 @@ function renderCurrentToDoLost(arr) {
     const arrButtonsDelete = document.querySelectorAll('.button__delete');
     arrButtonsDelete.forEach(function (button) {
         button.addEventListener('click', event => {
-            deleteItem(event, arrToDo);
+            deleteItem(event, 'arrToDo');
         });
     });
 
 
     const arrButtonsRelocate = document.querySelectorAll('.button__arh');
     arrButtonsRelocate.forEach(function (button) {
-        button.addEventListener('click', relocateItemToArhive);
+        button.addEventListener('click', event => { relocateItem(event, 'relocateToArchive') });
     });
 };
 

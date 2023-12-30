@@ -2,6 +2,7 @@
 import renderTotalListItem from './renderTotalList.js';
 import { renderCurrentToDoLost } from './renderMainList.js';
 import renderArchiveToDo from './renderArchiveList.js';
+import selectItem from './selected.js';
 
 export let archiveToDo = [];
 export let arrToDo = [];
@@ -18,9 +19,14 @@ async function readJsonFile() {
         sessionStorage.setItem('archiveToDo', JSON.stringify(json.archiveToDo));
         sessionStorage.setItem('totalTodo', JSON.stringify(json.totalTodo));
 
-        renderCurrentToDoLost(JSON.parse(sessionStorage.getItem('arrToDo')));
-        renderTotalListItem(JSON.parse(sessionStorage.getItem('totalTodo')));
-        renderArchiveToDo(JSON.parse(sessionStorage.getItem('archiveToDo')));
+        const archiveToDo1 = JSON.parse(sessionStorage.getItem('archiveToDo'));
+        sessionStorage.setItem('itemId', JSON.stringify(archiveToDo1[archiveToDo1.length - 1].id));
+
+
+
+        renderCurrentToDoLost();
+        renderTotalListItem();
+        renderArchiveToDo();
 
     } catch (error) {
         console.error('Помилка:', error.message);

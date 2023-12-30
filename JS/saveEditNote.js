@@ -5,10 +5,11 @@ import { modal } from './modalWindow.js';
 import renderTotalListItem from './renderTotalList.js';
 import { setActionType } from './modalWindow.js';
 import clearForm from './clearForm.js';
-import selectItem from './selected.js';
+// import selectItem from './selected.js';
 
-export default function saveEditNote(event) {
-    const index = arrToDo.findIndex(item => item.id === event + 1);
+export default function saveEditNote(itemId) {
+    const operatingArray = JSON.parse(sessionStorage.getItem('arrToDo'));
+    const index = operatingArray.findIndex(item => item.id === itemId + 1);
     const formData = new FormData(noteForm);
     const note = {};
     formData.forEach((value, key) => {
@@ -17,13 +18,14 @@ export default function saveEditNote(event) {
     if (note.Name.length >= 5 && note.Content.length >= 5) {
         let newObj = {};
         newObj = Object.assign({ "id": index }, note);
-        arrToDo[index] = newObj;
-        renderCurrentToDoLost(arrToDo);
+        operatingArray[index] = newObj;
+        sessionStorage.setItem('arrToDo', JSON.stringify(operatingArray));
+        renderCurrentToDoLost();
         modal.style.display = 'none';
     };
 
     setActionType('edit');
-    renderCurrentToDoLost(arrToDo);
+    renderCurrentToDoLost();
     renderTotalListItem();
     clearForm();
 };

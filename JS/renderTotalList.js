@@ -3,9 +3,10 @@
 export default function renderTotalListItem() {
     const arrToDo = JSON.parse(sessionStorage.getItem('arrToDo'));
     const archiveToDo = JSON.parse(sessionStorage.getItem('archiveToDo'));
-    console.log(arrToDo, archiveToDo)
+
     const totalTodoListElement = document.querySelector('.toDo__list__total');
     totalTodoListElement.innerHTML = '';
+
     const actualNotesTask = arrToDo.filter(item => item.Category === "Task").length;
     const actualNotesIdea = arrToDo.filter(item => item.Category === "Idea").length;
     const actualNotesRandom = arrToDo.filter(item => item.Category === "Random thing").length;

@@ -1,10 +1,11 @@
 'use strict';
 import { visibility } from './renderMainList.js';
-import relocateToMainList from './relocateToMainList.js';
 import deleteItem from './deleteItem.js';
+import relocateItem from './relocateItem.js';
 
 
-export default function renderArchiveToDo(archiveToDo) {
+export default function renderArchiveToDo() {
+    const archiveToDo = JSON.parse(sessionStorage.getItem('archiveToDo'));
 
     const taskList = archiveToDo.filter(item => item.Category == 'Task');
     const todoListElement = document.querySelector('.ul_task');
@@ -83,12 +84,12 @@ export default function renderArchiveToDo(archiveToDo) {
     const arrButtonsDelete = document.querySelectorAll('.button__delete__2');
     arrButtonsDelete.forEach(function (button) {
         button.addEventListener('click', event => {
-            deleteItem(event, archiveToDo);
+            deleteItem(event, 'archiveToDo');
         });
     });
     const arrButtonsRelocateToActualList = document.querySelectorAll('.button__arh__2');
     arrButtonsRelocateToActualList.forEach(function (button) {
-        button.addEventListener('click', relocateToMainList);
+        button.addEventListener('click', event => { relocateItem(event, 'relocateToMain') });
     });
 };
 
