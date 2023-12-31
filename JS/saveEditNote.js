@@ -1,11 +1,10 @@
 'use strict'
 import { renderCurrentToDoLost } from './renderMainList.js';
-import { arrToDo } from './main.js';
 import { modal } from './modalWindow.js';
 import renderTotalListItem from './renderTotalList.js';
 import { setActionType } from './modalWindow.js';
 import clearForm from './clearForm.js';
-// import selectItem from './selected.js';
+
 
 export default function saveEditNote(itemId) {
     const operatingArray = JSON.parse(sessionStorage.getItem('arrToDo'));

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -13,96 +13,59 @@
 </head>
 <body>
     <div class="wrapper">
-        <section id="1">
-            <div class="list__actual">
-            <div class="headet__title title__name ">
-                <h1 class="title header__title">Actual Notes</h1>
-            </div>
-            <div class="current__toDo__list">
-                <div class="div__ul__list">
-                    <ul class="header__toDo__list">
-                        <li class="cat__list" >Name</li>
-                        <li class="cat__list">Created</li>
-                        <li class="cat__list">Category</li>
-                        <li class="cat__list">Content</li>
-                        <li class="cat__list">Dates</li>
-                        <li class="cat__list" >
-                            <button class="button__header">
-                                <img  class="img__header__logo img__header" src="./img/edit.png" alt="garbage">
-                            </button>
-                            <button class="button__header">
-                                <img  class="img__header__logo img__header" src="./img/garbage.png" alt="garbage"> 
-                            </button>
-                            <button class="button__header">
-                                <img  class="img__header__logo img__header" src="./img/arh.png" alt="garbage">   
-                            </button>                          
-                        </li>                    
-                     </ul>                     
-                </div>             
-                <div class="div__ul__list">
-                    <ul id="todoList" class="main__toDo__list">             
-                </div>                                
-            </div>
-            <div class="div__create__note">
-                <button class="button__create__note">Create Note</button>
-            </div>                        
-        </div>  
+        <section class="section-one">
+                <div class="actual-list">                    
+                    <h1 class="title header-title">Actual Notes</h1>
+                    <ul class="header-toDo-list">
+                        <li class="cat-category cat-list" >Name</li>
+                        <li class="cat-list cat-craeted">Created</li>
+                        <li class="cat-list cat-category">Category</li>
+                        <li class="cat-list cat-content">Content</li>
+                        <li class="cat-list cat-date">Dates</li>
+                        <div class="btn" >
+                            <img  class="img-header-logo img-header" src="./img/edit.png" alt="edit img">
+                            <img  class="img-header-logo img-header" src="./img/garbage.png" alt="garbage img"> 
+                            <img  class="img-header-logo img-header" src="./img/arh.png" alt="archive img">   
+                        </div>                   
+                    </ul>
+                    <ul class="main__toDo__list"></ul> 
+                    <div class="div-create-note">
+                        <button class="button-create-note">Create Note</button>
+                    </div> 
+                                      
+                </div>  
         </section>
-        <section id="2">
+        
+        <section class="two">
             <div class="list__arhive">
-                <div class="arhive__title title__name">
-                    <h2 class="title header__title">Archive Notes</h2>
-                </div>
-                <div class="current__toDo__list ">
-                    <div class="div__ul__list">
-                        <ul class="header__toDo__list">
-                            <li class="cat__list" >Name</li>
-                            <li class="cat__list">Created</li>
-                            <li class="cat__list">Category</li>
-                            <li class="cat__list">Content</li>
-                            <li class="cat__list">Dates</li>
-                            <li class="cat__list" >
-                                <button class="button__header">
-                                    <img  class="img__header__logo img__header" src="./img/edit.png" alt="garbage">
-                                </button>
-                                <button class="button__header">
-                                    <img  class="img__header__logo img__header" src="./img/garbage.png" alt="garbage"> 
-                                </button>
-                                <button class="button__header">
-                                    <img  class="img__header__logo img__header" src="./img/arh.png" alt="garbage">   
-                                </button>                          
-                            </li>                    
-                        </ul>                     
-                    </div>
-                    <div class="div__ul__list">                    
-                </div>             
-                <div class="div__ul__list">
-                    <ul id="todoList" class="arhive__toDo__list">
-                        <li class="arhive__list div_task arhive__div">Task</li>
-                            <ul class="arhive__list ul_task Task">                           
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>
-                        <li class="arhive__list div_idea arhive__div" >Idea</li>
-                            <ul class="arhive__list  ul_idea Idea">                           
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul>                        
-                        <li class="arhive__list div_idea arhive__div" >Random thing</li>
-                            <ul class="arhive__list  ul_random Randomthing">                           
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                            </ul> 
-                    </ul>                              
-                </div>                                
-            </div>
+                <h2 class="title header-title">Archive Notes</h2>
+                <ul class="header-toDo-list">
+                    <li class="cat-list cat-content" >Name</li>
+                    <li class="cat-list cat-craeted">Created</li>
+                    <li class="cat-list cat-category">Category</li>
+                    <li class="cat-list cat-content">Content</li>
+                    <li class="cat-list cat-date">Dates</li>
+                    <div class="btn" >
+                        <img  class="img-header-logo img-header" src="./img/edit.png" alt="edit img">
+                        <img  class="img-header-logo img-header" src="./img/garbage.png" alt="garbage img"> 
+                        <img  class="img-header-logo img-header" src="./img/arh.png" alt="archive img">   
+                    </div>                  
+                </ul>   
+                <ul id="todoList" class="arhive__toDo__list">
+                    <li class="arhive__list div_task arhive__div">Task</li>
+                        <ul class="arhive__list ul_task Task">                         
+                        </ul>
+                    <li class="arhive__list div_idea arhive__div" >Idea</li>
+                        <ul class="arhive__list  ul_idea Idea">                          
+                        </ul>                        
+                    <li class="arhive__list div_idea arhive__div" >Random thing</li>
+                        <ul class="arhive__list  ul_random Randomthing">                           
+                        </ul> 
+                </ul>            
             </div>
         </section>
 
-        <section id="3">
+        <!-- <section class="three">
             <div class="title__name">
                 <h2 class="title">Total List</h2>
             </div>            
@@ -119,9 +82,9 @@
                     </ul>
                 </div>           
             </div>
-        </section>
+        </section> -->
 
-        <section id="4">
+        <section class="four">
             <div id="myModal" class="modal__window">
                 <div class="modal-content">
                     <span class="close" id="closeModalBtn">&times;</span>
@@ -163,7 +126,7 @@
             </div>
         </section>          
     
-    </div>
+    </div>    
 </body>
 <script type="module" src="./JS/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

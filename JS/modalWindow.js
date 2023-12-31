@@ -9,7 +9,7 @@ export let actionType = 'create';
 export let itemNum = -1;
 
 
-const openModalBtn = document.querySelector('.button__create__note');
+const openModalBtn = document.querySelector('.button-create-note');
 const closeModalBtn = document.querySelector('.close');
 export const modal = document.querySelector('.modal__window');
 const saveBtn = document.getElementById('saveBtn');
