@@ -4,7 +4,7 @@ export default function renderTotalListItem() {
     const arrToDo = JSON.parse(sessionStorage.getItem('arrToDo'));
     const archiveToDo = JSON.parse(sessionStorage.getItem('archiveToDo'));
 
-    const totalTodoListElement = document.querySelector('.toDo__list__total');
+    const totalTodoListElement = document.querySelector('.toDo-list-total');
     totalTodoListElement.innerHTML = '';
 
     const actualNotesTask = arrToDo.filter(item => item.Category === "Task").length;
@@ -33,9 +33,9 @@ export default function renderTotalListItem() {
 
     totalTodo.map(item => {
         const totalTaskElement = document.createElement('li');
-        totalTaskElement.classList.add('total__li__item');
+        totalTaskElement.classList.add('cat-listtotal');
         totalTaskElement.innerHTML = `
-        <li class="cat__name">${item.NoteCategory}</li>
+        <li class="cat-name">${item.NoteCategory}</li>
         <li > ${item.Active}</li>
         <li> ${item.Arhived}</li>      
          `;

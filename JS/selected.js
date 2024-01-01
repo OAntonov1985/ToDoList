@@ -1,6 +1,6 @@
 'use strict'
 
-const arhiveDivs = document.querySelectorAll('.arhive__div');
+const arhiveDivs = document.querySelectorAll('.arhive-div');
 
 export default function selectItem() {
     arhiveDivs.forEach(item => {

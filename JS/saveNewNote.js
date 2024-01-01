@@ -2,19 +2,21 @@
 import clearForm from './clearForm.js';
 import { renderCurrentToDoLost } from './renderMainList.js';
 import renderTotalListItem from './renderTotalList.js';
-
 const modal = document.querySelector('.modal__window');
-const operatingArray = JSON.parse(sessionStorage.getItem('arrToDo'));
-let itemId = JSON.parse(sessionStorage.getItem('itemId'));
+
 
 
 export default function saveNewNote(event) {
-    event.preventDefault()
+    event.preventDefault();
+    const operatingArray = JSON.parse(sessionStorage.getItem('arrToDo'));
+    let itemId = JSON.parse(sessionStorage.getItem('itemId'));
     const formData = new FormData(noteForm);
     const note = {};
+
     formData.forEach((value, key) => {
         note[key] = value;
     });
+
     if (note.Name.length < 4) {
         alert('Name is too short');
     }
@@ -31,6 +33,7 @@ export default function saveNewNote(event) {
         renderCurrentToDoLost();
         modal.style.display = 'none';
     };
+
     clearForm();
     renderTotalListItem();
 }

@@ -23,7 +23,7 @@ async function readJsonFile() {
 
 
         renderCurrentToDoLost();
-        // renderTotalListItem();
+        renderTotalListItem();
         renderArchiveToDo();
 
     } catch (error) {
@@ -31,6 +31,7 @@ async function readJsonFile() {
     }
 }
 readJsonFile();
+
 
 
 

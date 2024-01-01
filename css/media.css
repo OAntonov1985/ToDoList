@@ -1,3 +1,5 @@
+
+/* /////////////////////////// actuallist /////////////////////////// */
 @media (max-width: 768px) { 
     .header-title {
         font-size: 18px;
@@ -73,4 +75,24 @@
         font-size: 16px;
         padding: 6px 22px
     }
+}
+
+
+
+/* /////////////////////////// archivelist /////////////////////////// */
+@media (max-width: 768px) { 
+    .arhive-list {
+        width: 95%;
+    }  
+    .arhive-div {
+        width: 98%;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+  .arhive-list {
+        width: 100%;
+    }     
 }

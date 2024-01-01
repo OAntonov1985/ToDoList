@@ -7,87 +7,91 @@ import relocateItem from './relocateItem.js';
 export default function renderArchiveToDo() {
     const archiveToDo = JSON.parse(sessionStorage.getItem('archiveToDo'));
 
+
+    //////////////////  render Task list in archive  ////////////////////
     const taskList = archiveToDo.filter(item => item.Category == 'Task');
-    const todoListElement = document.querySelector('.ul_task');
+    const todoListElement = document.querySelector('.ul-task');
     todoListElement.innerHTML = '';
     taskList.map(task => {
         const taskElement = document.createElement('li');
         taskElement.innerHTML = `
-        <li class="cat__name">${task.Name}</li>
-        <li> ${task.Created}</li>
-        <li> ${task.Category}</li>
-        <li> ${task.Content}</li>
-        <li class=${task.id}>${task.Dates ? `<input id=${task.id} class="input__date  input__date${task.id}" type="date" value="${task.Dates}" >` : `<input id=${task.id} class="input__date input__date${task.id}" type="date" value="" style="opacity: ${visibility}">`}</li>
-        <li class="btn">           
-            <button id=${task.id} class="button__active__list button__delete__2" value=delete_archive>                
+        <div class="cat-name">${task.Name}</div>
+        <div class="cat-craeted"> ${task.Created}</div>
+        <div class="cat-category">${task.Category}</div>
+        <div class="cat-content"> ${task.Content}</div>
+        <div class="cat-date">${task.Dates ? `<input  class="input-date  input-date${task.id}" type="date" value="${task.Dates}" >` : `<input  class="input-date input-date${task.id}" type="date" value="" style="opacity: ${visibility}">`}</div>        
+        <div class="btn">            
+            <button id=${task.id} class="button-active-list button-delete-2">   
             </button>
-            <button id=${task.id} class="button__active__list button__arh__2">                
+        <button id=${task.id} class="button-active-list button-arh-2">           
             </button>                          
-        </li>    
+        </div>    
         `;
         todoListElement.appendChild(taskElement);
-        taskElement.classList.add('cat__listitem');
+        taskElement.classList.add('cat-listarchive');
     });
 
-    ////////////////////
 
+    //////////////////  render Idea list in archive  ////////////////////
     const ideaList = archiveToDo.filter(item => {
         return item.Category === 'Idea'
     });
-    const ideaListElement = document.querySelector('.ul_idea');
+    const ideaListElement = document.querySelector('.ul-idea');
     ideaListElement.innerHTML = '';
     ideaList.map(task => {
         const ideaElement = document.createElement('li');
         ideaElement.innerHTML = `
-        <li class="cat__name">${task.Name}</li>
-        <li> ${task.Created}</li>
-        <li> ${task.Category}</li>
-        <li> ${task.Content}</li>
-        <li class=${task.id}>${task.Dates ? `<input id=${task.id} class="input__date  input__date${task.id}" type="date" value="${task.Dates}" >` : `<input id=${task.id} class="input__date input__date${task.id}" type="date" value="" style="opacity: ${visibility}">`}</li>
-        <li class="btn">            
-            <button id=${task.id} class="button__active__list button__delete__2" value=delete_archive>                
+        <div class="cat-name">${task.Name}</div>
+        <div class="cat-craeted"> ${task.Created}</div>
+        <div class="cat-category">${task.Category}</div>
+        <div class="cat-content"> ${task.Content}</div>
+        <div class="cat-date">${task.Dates ? `<input  class="input-date  input-date${task.id}" type="date" value="${task.Dates}" >` : `<input  class="input-date input-date${task.id}" type="date" value="" style="opacity: ${visibility}">`}</div>        
+        <div class="btn">            
+            <button id=${task.id} class="button-active-list button-delete-2">
             </button>
-            <button id=${task.id} class="button__active__list button__arh__2">                  
-            </button>                          
-        </li>    
+            <button id=${task.id} class="button-active-list button-arh-2">
+            </button>
+        </div>    
         `;
         ideaListElement.appendChild(ideaElement);
-        ideaElement.classList.add('cat__listitem');
+        ideaElement.classList.add('cat-listitem');
     });
 
-    ////////////////////
 
+    //////////////////  render Random thing list in archive  ////////////////////
     const randomList = archiveToDo.filter(item => {
         return item.Category === 'Random thing'
     })
-    const randomListElement = document.querySelector('.ul_random');
+    const randomListElement = document.querySelector('.ul-random');
     randomListElement.innerHTML = '';
     randomList.map(task => {
         const randomElement = document.createElement('li');
         randomElement.innerHTML = `
-        <li class="cat__name">${task.Name}</li>
-        <li> ${task.Created}</li>
-        <li> ${task.Category}</li>
-        <li> ${task.Content}</li>
-        <li class=${task.id}>${task.Dates ? `<input id=${task.id} class="input__date  input__date${task.id}" type="date" value="${task.Dates}" >` : `<input id=${task.id} class="input__date input__date${task.id}" type="date" value="" style="opacity: ${visibility}">`}</li>
-        <li class="btn">            
-            <button id=${task.id} class="button__active__list button__delete__2" value=delete_archive>                
+        <div class="cat-name">${task.Name}</div>
+        <div class="cat-craeted"> ${task.Created}</div>
+        <div class="cat-category">${task.Category}</div>
+        <div class="cat-content"> ${task.Content}</div>
+        <div class="cat-date">${task.Dates ? `<input  class="input-date  input-date${task.id}" type="date" value="${task.Dates}" >` : `<input  class="input-date input-date${task.id}" type="date" value="" style="opacity: ${visibility}">`}</div>        
+        <div class="btn">            
+            <button id=${task.id} class="button-active-list button-delete-2">   
             </button>
-            <button id=${task.id} class="button__active__list button__arh__2">                
+        <button id=${task.id} class="button-active-list button-arh-2">           
             </button>                          
-        </li>    
+        </div>     
         `;
         randomListElement.appendChild(randomElement);
-        randomElement.classList.add('cat__listitem');
+        randomElement.classList.add('cat-listitem');
     });
 
-    const arrButtonsDelete = document.querySelectorAll('.button__delete__2');
+
+
+    const arrButtonsDelete = document.querySelectorAll('.button-delete-2');
     arrButtonsDelete.forEach(function (button) {
         button.addEventListener('click', event => {
             deleteItem(event, 'archiveToDo');
         });
     });
-    const arrButtonsRelocateToActualList = document.querySelectorAll('.button__arh__2');
+    const arrButtonsRelocateToActualList = document.querySelectorAll('.button-arh-2');
     arrButtonsRelocateToActualList.forEach(function (button) {
         button.addEventListener('click', event => { relocateItem(event, 'relocateToMain') });
     });
