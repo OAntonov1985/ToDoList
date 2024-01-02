@@ -1,11 +1,11 @@
-
 /* .toDo-list-head {
     display: flex;
     justify-content: space-around;
 } */
 
-.cat-listtotal li, .toDo-list-head li{
-    text-align: center;
-    width: 33%;
-    /* flex: 1 1  33%; */
+.cat-listtotal li,
+.toDo-list-head li {
+  text-align: center;
+  width: 33%;
+  /* flex: 1 1  33%; */
 }

@@ -1,13 +1,13 @@
-'use strict'
+"use strict";
 
-const arhiveDivs = document.querySelectorAll('.arhive-div');
+const arhiveDivs = document.querySelectorAll(".arhive-div");
 
 export default function selectItem() {
     arhiveDivs.forEach(item => {
-        item.addEventListener('click', (event) => {
+        item.addEventListener("click", event => {
             showList(event.target.textContent.replace(/\s/g, ""));
-        })
-    })
+        });
+    });
 }
 selectItem();
 
@@ -18,5 +18,4 @@ function showList(event) {
     } else {
         itemName.style.maxHeight = itemName.scrollHeight + "px";
     }
-
-};
+}

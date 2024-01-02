@@ -1,13 +1,12 @@
-'use strict'
-import { renderCurrentToDoLost } from './renderMainList.js';
-import { modal } from './modalWindow.js';
-import renderTotalListItem from './renderTotalList.js';
-import { setActionType } from './modalWindow.js';
-import clearForm from './clearForm.js';
-
+"use strict";
+import { renderCurrentToDoLost } from "./renderMainList.js";
+import { modal } from "./modalWindow.js";
+import renderTotalListItem from "./renderTotalList.js";
+import { setActionType } from "./modalWindow.js";
+import clearForm from "./clearForm.js";
 
 export default function saveEditNote(itemId) {
-    const operatingArray = JSON.parse(sessionStorage.getItem('arrToDo'));
+    const operatingArray = JSON.parse(sessionStorage.getItem("arrToDo"));
     const index = operatingArray.findIndex(item => item.id === itemId + 1);
     const formData = new FormData(noteForm);
     const note = {};
@@ -16,16 +15,15 @@ export default function saveEditNote(itemId) {
     });
     if (note.Name.length >= 5 && note.Content.length >= 5) {
         let newObj = {};
-        newObj = Object.assign({ "id": index }, note);
+        newObj = Object.assign({ id: index }, note);
         operatingArray[index] = newObj;
-        sessionStorage.setItem('arrToDo', JSON.stringify(operatingArray));
+        sessionStorage.setItem("arrToDo", JSON.stringify(operatingArray));
         renderCurrentToDoLost();
-        modal.style.display = 'none';
-    };
+        modal.style.display = "none";
+    }
 
-    setActionType('edit');
+    setActionType("edit");
     renderCurrentToDoLost();
     renderTotalListItem();
     clearForm();
-};
-
+}
