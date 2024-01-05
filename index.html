@@ -1,188 +1,210 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+        />
 
-    <title>ToDoList</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <section class="section-one">
-        <div class="actual-list">
-          <h1 class="title header-title">Actual Notes</h1>
-          <ul class="header-toDo-list">
-            <li class="cat-category cat-list">Name</li>
-            <li class="cat-list cat-craeted">Created</li>
-            <li class="cat-list cat-category">Category</li>
-            <li class="cat-list cat-content">Content</li>
-            <li class="cat-list cat-date">Dates</li>
-            <div class="btn">
-              <img
-                class="img-header-logo img-header"
-                src="./img/edit.png"
-                alt="edit img"
-              />
-              <img
-                class="img-header-logo img-header"
-                src="./img/garbage.png"
-                alt="garbage img"
-              />
-              <img
-                class="img-header-logo img-header"
-                src="./img/arh.png"
-                alt="archive img"
-              />
-            </div>
-          </ul>
-          <ul class="main__toDo__list"></ul>
-          <div class="div-create-note">
-            <button class="button-create-note">Create Note</button>
-          </div>
+        <title>ToDoList</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <section class="section-one">
+                <div class="actual-list">
+                    <h1 class="title header-title">Actual Notes</h1>
+                    <ul class="header-toDo-list">
+                        <li class="cat-category cat-list">Name</li>
+                        <li class="cat-list cat-craeted">Created</li>
+                        <li class="cat-list cat-category">Category</li>
+                        <li class="cat-list cat-content">Content</li>
+                        <li class="cat-list cat-date">Dates</li>
+                        <div class="btn">
+                            <img
+                                class="img-header-logo img-header"
+                                src="./img/edit.png"
+                                alt="edit img"
+                            />
+                            <img
+                                class="img-header-logo img-header"
+                                src="./img/garbage.png"
+                                alt="garbage img"
+                            />
+                            <img
+                                class="img-header-logo img-header"
+                                src="./img/arh.png"
+                                alt="archive img"
+                            />
+                        </div>
+                    </ul>
+                    <ul class="main__toDo__list"></ul>
+                    <div class="div-create-note">
+                        <button class="button-create-note">Create Note</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="two">
+                <div class="list__arhive">
+                    <h2 class="title header-title">Archive Notes</h2>
+                    <ul class="header-toDo-list">
+                        <li class="cat-list cat-content">Name</li>
+                        <li class="cat-list cat-craeted">Created</li>
+                        <li class="cat-list cat-category">Category</li>
+                        <li class="cat-list cat-content">Content</li>
+                        <li class="cat-list cat-date">Dates</li>
+                        <div class="btn">
+                            <img
+                                class="img-header-logo img-header"
+                                src="./img/garbage.png"
+                                alt="garbage img"
+                            />
+                            <img
+                                class="img-header-logo img-header"
+                                src="./img/arh.png"
+                                alt="archive img"
+                            />
+                        </div>
+                    </ul>
+                    <ul class="arhive-toDo-list">
+                        <li class="arhive-list div-task arhive-div">Task</li>
+                        <ul class="arhive-list ul-task Task"></ul>
+                        <li class="arhive-list div-idea arhive-div">Idea</li>
+                        <ul class="arhive-list ul-idea Idea"></ul>
+                        <li class="arhive-list div-random arhive-div">
+                            Random thing
+                        </li>
+                        <ul class="arhive-list ul-random Randomthing"></ul>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="three">
+                <div class="total-todo">
+                    <h2 class="title header-title">Total List</h2>
+                    <ul class="header-toDo-list toDo-list-head">
+                        <li class="cat-list">Note category</li>
+                        <li class="cat-list">Active</li>
+                        <li class="cat-list">Archived</li>
+                    </ul>
+                    <ul class="toDo-list-main toDo-list-total"></ul>
+                </div>
+            </section>
+
+            <section class="four">
+                <div id="myModal" class="modal__window">
+                    <div class="modal-content">
+                        <span class="close" id="closeModalBtn">&times;</span>
+                        <form
+                            id="noteForm"
+                            class="create__new__note edit__note"
+                        >
+                            <div class="row__1 row__form">
+                                <label class="label__info" for="name"
+                                    >Name:</label
+                                >
+                                <input
+                                    class="input__form input__name textInput"
+                                    type="text"
+                                    id="textInput"
+                                    name="Name"
+                                    value=""
+                                    pattern=".{4,}"
+                                    required
+                                />
+                            </div>
+
+                            <div class="row__2 row__form">
+                                <label class="label__info" for="created"
+                                    >Created:</label
+                                >
+                                <input
+                                    class="input__form input__created"
+                                    type="date"
+                                    id="created"
+                                    name="Created"
+                                    pattern=".{4,}"
+                                    required
+                                />
+                            </div>
+
+                            <div class="row__3 row__form">
+                                <label class="label__info" for="category"
+                                    >Category:</label
+                                >
+                                <select
+                                    class="input__form input__select"
+                                    id="category"
+                                    name="Category"
+                                    required
+                                    value=""
+                                >
+                                    <option class="label__info" value="Task">
+                                        Task
+                                    </option>
+                                    <option
+                                        class="label__info"
+                                        value="Random thing"
+                                    >
+                                        Random thing
+                                    </option>
+                                    <option class="label__info" value="Idea">
+                                        Idea
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="row__4 row__form">
+                                <label class="label__info" for="content"
+                                    >Content:</label
+                                >
+                                <textarea
+                                    class="input__form textInput input__textarea"
+                                    id="content"
+                                    name="Content"
+                                    value=""
+                                    required
+                                    minlength="5"
+                                    pattern=".{5,}"
+                                ></textarea>
+                            </div>
+
+                            <div class="row__5 row__form">
+                                <label class="label__info" for="dates"
+                                    >Dates:</label
+                                >
+                                <input
+                                    class="input__form input__date"
+                                    type="date"
+                                    id="dates"
+                                    name="Dates"
+                                />
+                            </div>
+
+                            <div class="row__6 row__form">
+                                <button
+                                    type="submit"
+                                    id="saveBtn"
+                                    class="btn__save button__create__note"
+                                >
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-
-      <section class="two">
-        <div class="list__arhive">
-          <h2 class="title header-title">Archive Notes</h2>
-          <ul class="header-toDo-list">
-            <li class="cat-list cat-content">Name</li>
-            <li class="cat-list cat-craeted">Created</li>
-            <li class="cat-list cat-category">Category</li>
-            <li class="cat-list cat-content">Content</li>
-            <li class="cat-list cat-date">Dates</li>
-            <div class="btn">
-              <img
-                class="img-header-logo img-header"
-                src="./img/garbage.png"
-                alt="garbage img"
-              />
-              <img
-                class="img-header-logo img-header"
-                src="./img/arh.png"
-                alt="archive img"
-              />
-            </div>
-          </ul>
-          <ul class="arhive-toDo-list">
-            <li class="arhive-list div-task arhive-div">Task</li>
-            <ul class="arhive-list ul-task Task"></ul>
-            <li class="arhive-list div-idea arhive-div">Idea</li>
-            <ul class="arhive-list ul-idea Idea"></ul>
-            <li class="arhive-list div-random arhive-div">Random thing</li>
-            <ul class="arhive-list ul-random Randomthing"></ul>
-          </ul>
-        </div>
-      </section>
-
-      <section class="three">
-        <div class="total-todo">
-          <h2 class="title header-title">Total List</h2>
-          <ul class="header-toDo-list toDo-list-head">
-            <li class="cat-list">Note category</li>
-            <li class="cat-list">Active</li>
-            <li class="cat-list">Archived</li>
-          </ul>
-          <ul class="toDo-list-main toDo-list-total"></ul>
-        </div>
-      </section>
-
-      <section class="four">
-        <div id="myModal" class="modal__window">
-          <div class="modal-content">
-            <span class="close" id="closeModalBtn">&times;</span>
-            <form id="noteForm" class="create__new__note edit__note">
-              <div class="row__1 row__form">
-                <label class="label__info" for="name">Name:</label>
-                <input
-                  class="input__form input__name textInput"
-                  type="text"
-                  id="textInput"
-                  name="Name"
-                  value=""
-                  pattern=".{4,}"
-                  required
-                />
-              </div>
-
-              <div class="row__2 row__form">
-                <label class="label__info" for="created">Created:</label>
-                <input
-                  class="input__form input__created"
-                  type="date"
-                  id="created"
-                  name="Created"
-                  pattern=".{4,}"
-                  required
-                />
-              </div>
-
-              <div class="row__3 row__form">
-                <label class="label__info" for="category">Category:</label>
-                <select
-                  class="input__form input__select"
-                  id="category"
-                  name="Category"
-                  required
-                  value=""
-                >
-                  <option class="label__info" value="Task">Task</option>
-                  <option class="label__info" value="Random thing">
-                    Random thing
-                  </option>
-                  <option class="label__info" value="Idea">Idea</option>
-                </select>
-              </div>
-
-              <div class="row__4 row__form">
-                <label class="label__info" for="content">Content:</label>
-                <textarea
-                  class="input__form textInput input__textarea"
-                  id="content"
-                  name="Content"
-                  value=""
-                  required
-                  minlength="5"
-                  pattern=".{5,}"
-                ></textarea>
-              </div>
-
-              <div class="row__5 row__form">
-                <label class="label__info" for="dates">Dates:</label>
-                <input
-                  class="input__form input__date"
-                  type="date"
-                  id="dates"
-                  name="Dates"
-                />
-              </div>
-
-              <div class="row__6 row__form">
-                <button
-                  type="submit"
-                  id="saveBtn"
-                  class="btn__save button__create__note"
-                >
-                  Save
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    </div>
-  </body>
-  <script type="module" src="./JS/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    </body>
+    <script type="module" src="./JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </html>

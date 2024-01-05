@@ -22,7 +22,7 @@ export default function saveEditNote(itemId) {
         modal.style.display = "none";
     }
 
-    setActionType("edit");
+    setActionType("create");
     renderCurrentToDoLost();
     renderTotalListItem();
     clearForm();

@@ -3,6 +3,7 @@
 import saveEditNote from "./saveEditNote.js";
 import saveNewNote from "./saveNewNote.js";
 import displayNoteForEditing from "./displayNoteForEditing.js";
+import clearForm from './clearForm.js';
 
 export let actionType = "create";
 export let itemNum = -1;
@@ -33,6 +34,17 @@ openModalBtn.addEventListener("click", () => {
 
 closeModalBtn.addEventListener("click", () => {
     modal.style.display = "none";
+    // console.log("create");
+    setActionType("create");
+    clearForm();
+});
+
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        setActionType("create");
+        modal.style.display = 'none';
+        clearForm();
+    }
 });
 
 saveBtn.addEventListener("click", function (event) {
